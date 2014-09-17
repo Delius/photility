@@ -1,0 +1,23 @@
+
+<div class="container">
+
+	<h2> Looking for Photos ?</h2>
+	<%= simple_form_for(@search) do |f| %>
+	<div class="row">
+		<div class="col-xs-6 col-sm-4"><%= f.input :stock_ref, :label => 'Just Enter Stock Reference' %></div>
+		<div class="col-xs-6 col-sm-4"><%= f.input :registration, :label => 'and  Reg Plate Nr'%></div>
+
+		<!-- Add the extra clearfix for only the required viewport -->
+		<!-- <div class="clearfix visible-xs-block"></div> -->
+		<br>
+		<div class="col-xs-6 col-sm-4"><%= f.button  :submit, "Show Photos",
+		:title => "Just Be Carefull!!! you may find what you're looking for" , :class => "btn btn-success"%>
+	</div>
+
+</div>
+
+
+
+
+<% end %>
+
