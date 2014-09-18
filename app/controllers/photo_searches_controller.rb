@@ -15,7 +15,8 @@ class PhotoSearchesController < ApplicationController
 	end
 
 	def index
-		@images = PhotoSearch.new.fetch_images(params[:ref])
+		@large_images = PhotoSearch.new.fetch_large_images(params[:ref])
+		@small_images = PhotoSearch.new.fetch_small_images(params[:ref])
 	end
 
 end

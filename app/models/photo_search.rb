@@ -18,9 +18,21 @@ class PhotoSearch
 		end
 	end
 
-	def fetch_images(reference)
+	def fetch_large_images(reference)
 		images = []
-		sizes = [350 , 800]
+		sizes = [800]
+		cameras = ['4', 'i', '6', 'f', '5', 'r']
+		sizes.each do |size|
+			cameras.each do |camera|
+				images << "http://imagecache.arnoldclark.com/imageserver/#{reference}/#{size}/#{camera}/"
+			end
+		end
+		images
+	end
+
+	def fetch_small_images(reference)
+		images = []
+		sizes = [350]
 		cameras = ['4', 'i', '6', 'f', '5', 'r']
 		sizes.each do |size|
 			cameras.each do |camera|
